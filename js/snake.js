@@ -5,7 +5,7 @@ var thwy;
 function Snake(){
 	this.color = "red";
 	this.width = 50;
-	this.height = 50;
+	this.height = 50;this.scores=0;
 	this.face = "right";
 	this.body = [
 		{x:3,y:3,color:'red'},
@@ -61,7 +61,7 @@ Snake.prototype.move = function(food,map){
 			x:last.x,
 			y:last.y,
 			color: last.color,
-		});
+		});this.scores+=1;
 		food.draw(map);
 	}
 	var tet = setInterval(function(){
