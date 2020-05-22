@@ -13,7 +13,7 @@
 			that.snake.draw(that.map);
 			if(that.snake.body[0].y >15 || that.snake.body[0].y<0||that.snake.body[0].x>15||that.snake.body[0].x<0 )
 			{
-				alert("游戏结束！");
+				alert("游戏结束，"+"您的分数为:"+that.snake.scores);
 				clearInterval(run);	
 			}
 		},200);
