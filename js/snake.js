@@ -2,6 +2,7 @@
 (function(){
 var elesn =[];
 var thwy;
+var isDead = 1;
 function Snake(){
 	this.color = "red";
 	this.width = 50;
