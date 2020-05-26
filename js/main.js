@@ -24,10 +24,10 @@
 	var rightb = document.getElementById("right");
 	var upb = document.getElementById("up");
 	var downb = document.getElementById("down");
-	leftb.addEventListener('click',function(){that.snake.face = 'left';},false);
-	rightb.addEventListener('click',function(){that.snake.face = 'right';},false);
-	upb.addEventListener('click',function(){that.snake.face = 'up';},false);
-	downb.addEventListener('click',function(){that.snake.face = 'down';},false);
+	rightb.addEventListener('click',function(){if(that.snake.face!='left')that.snake.face = 'right';},false);
+        leftb.addEventListener('click',function(){if(that.snake.face!='right')that.snake.face = 'left';},false);
+	upb.addEventListener('click',function(){if(that.snake.face!='down')that.snake.face = 'up';},false);
+	downb.addEventListener('click',function(){if(that.snake.face!='up')that.snake.face = 'down';},false);
 	var mao = document.getElementById("container");
 	var g = new game(mao);
 	g.start();
