@@ -73,12 +73,14 @@ Snake.prototype.move = function(food,map){
 		if((thwy.body[av].x === thwy.body[0].x)&&(thwy.body[av].y===thwy.body[0].y))
 		{
 			clearInterval(tet);
-			clearInterval(run);sayOver();
+			clearInterval(run);
+			sayOver();
 			//alert("吃到自己了");
 		}
 	}
 	},500);
-}function sayOver(){
+}
+function sayOver(){
 
     if(isDead===1)
 
