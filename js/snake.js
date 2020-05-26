@@ -72,11 +72,19 @@ Snake.prototype.move = function(food,map){
 		if((thwy.body[av].x === thwy.body[0].x)&&(thwy.body[av].y===thwy.body[0].y))
 		{
 			clearInterval(tet);
-			clearInterval(run);
+			clearInterval(run);sayOver();
 			//alert("吃到自己了");
 		}
 	}
 	},500);
+}function sayOver(){
+
+    if(isDead===1)
+
+    alert("咬到自己了，"+"您的分数为:"+thwy.scores);
+
+    isDead=-1;
+
 }
 function remov(){
 	for(var i= elesn.length - 1 ; i>=0 ; i--)
